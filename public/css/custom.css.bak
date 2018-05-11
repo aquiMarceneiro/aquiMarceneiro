@@ -1,0 +1,373 @@
+/* ================================================================== PAGE RESET */
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, section {
+	display: block;
+}
+body {
+	font-family: 'Calibri';
+	font-size: 18px;
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	max-width: 100%;
+	height: auto;
+	text-decoration: none;
+}
+
+/* ================================================================== CONFIG GERAL */
+.container{
+	width: 1080px;
+	padding: 10px 15px;
+}
+
+.show-service,
+.show-nservice,
+#rsqtd{display: none;}
+
+#super{
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.clear{ clear: both; }
+
+section { float:left; width:100%; height:100%;  padding:0px 0px; position:relative; }
+section h2.title { margin-bottom:50px; font-size:45px; color:#523111; font-weight:700; display:inline-block; position:relative; padding-top: 20px}
+section h2.title2 { margin-bottom:50px; font-size:45px; color:#8B4513; font-weight:700; display:inline-block; position:absolute; padding-top: 10px; padding-left: 60px}
+
+.inner { margin:0px auto; width:1170px; display:table; position:relative; }
+.row { float:left; width:100%; }
+
+/* HOME HERO */
+#hero { height:480px; position:relative; padding:0px; background: white;}
+
+#hero #slider { float:left; width:100%; height:480px; position:relative; opacity:0.6; }
+#hero #slider .slide { position:absolute; top:0px; left:0px; width:100%; height:100%; background-position:center; background-size:cover; z-index:0; opacity:0; transition:opacity 0s; }
+#hero #slider .slide .filter { position:absolute; top:0px; left:0px; width:100%; height:100%; background:-moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 77%, rgba(255,255,255,1) 100%); background:-webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 77%,rgba(255,255,255,1) 100%); background:linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 77%,rgba(255,255,255,1) 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#ffffff',GradientType=0 );}
+#hero #slider .slide.last { z-index:1; opacity:1; }
+#hero #slider .slide.active { z-index:2; opacity:1; transition:opacity 1s; }
+
+#hero .content { position:absolute; top:0px; left:0px; width:1170px; height:100%; left:50%; margin-left:-585px; z-index:3; }
+#hero .content h2 { position:absolute; top:160px; left:0px; width:740px; font-size:60px; color:white; text-shadow:0px 2px 5px rgba(0, 0, 0, 0.5); }
+
+#hero .content .textoBanner{ float:left; position: absolut; margin-top: 60px;  font-size: 60px; color: white; }
+
+#hero .content .search-box { position:absolute; width:370px; height:380px; top:80px; right:0px; }
+#hero .content .search-box h3 { position:absolute; top:-60px; left:60px; font-size:24px; text-align:center; background-color:#FFF; padding:15px 20px; border-radius:5px; }
+#hero .content .search-box h3 strong { color:white; }
+
+#hero .content .search-box .buttons { position:absolute; top:0px; left:0px; width:100%; height:100%; padding-top:50px; z-index:3; }
+#hero .content .search-box .buttons .btn { float:left; width:100%; margin-bottom:20px; padding:30px 20px; font-size:30px; box-sizing:border-box !important; }
+
+#hero .content .search-box .search-area { opacity:0; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2; }
+#hero .content .search-box .search-area.active { opacity:1; }
+
+#hero .content .search-box .search-area .header { float:left; width:100%; }
+#hero .content .search-box .search-area .header span { float:left; width:50%; padding:10px 0px; font-size:18px; font-weight:700; text-align:center; opacity:0.7; cursor:pointer; border-top-right-radius:6px; border-top-left-radius:6px; }
+#hero .content .search-box .search-area .header span.active,
+#hero .content .search-box .search-area .header span:hover { opacity:1; }
+#hero .content .search-box .search-area .header span:first-child { background-color:white; color:#532F08; }
+#hero .content .search-box .search-area .header span:last-child { background-color:#532F08; color:white; }
+
+#hero .content .search-box .search-area .search { float:left; }
+#hero .content .search-box .search-area .search.profissional { background-color:white; }
+#hero .content .search-box .search-area .search.orcamento { background-color:#532F08; }
+
+#hero .content .search-box .search-area form { float:left; width:100%; padding:20px; border-bottom-right-radius:6px; border-bottom-left-radius:6px; box-sizing:border-box; }
+#hero .content .search-box .search-area form select { float:left; width:100%; margin-bottom:10px; }
+#hero .content .search-box .search-area form .form-input { float:left; position:relative; width:100%; margin-bottom:10px; }
+#hero .content .search-box .search-area form .form-input input { width:100%; padding-right:35px; }
+#hero .content .search-box .search-area form .form-input img { display:none; position:absolute; top:15px; right:15px; cursor:pointer; transform:rotate(0deg); transition:all 0.15s; }
+#hero .content .search-box .search-area form .form-input input:focus + img { transform:rotate(90deg); }
+#hero .content .search-box .search-area form textarea { float:left; width:100%; height:100px; margin-bottom:10px; }
+#hero .content .search-box .search-area form button { font-size:24px; }
+#hero .content .search-box .search-area form .chosen-container { float:left; width:100%; margin-bottom:10px; }
+
+/* HERO FIM */
+
+#home-destaques { float:left; width:100%; background-color:#EEE8AA}
+
+#home-como-funciona  { float:left; width:100%; background-color:#EEE8AA}
+#home-como-funciona .itens { float:left; width:100%; }
+#home-como-funciona .itens .item { float:left; width:100%; margin-bottom:100px; position:relative; }
+#home-como-funciona .itens .item .info { width:740px; }
+#home-como-funciona .itens .item .info h3 { float:left; width:100%; margin-bottom:20px; font-size:30px; color:#532F08; padding-left: 40px}
+#home-como-funciona .itens .item .info p { float:left; width:100%; font-size:20px; line-height:26px; font-weight:300; color:#532F08; padding-left: 60px}
+/* #home-como-funciona .itens .item img { position:absolute; bottom:-50px; } */
+#home-como-funciona .itens .item.left .info { float:left; }
+/* #home-como-funciona .itens .item.left img { right:30px; } */
+#home-como-funciona .itens .item.right .info { float:right; }
+#home-como-funciona .itens .item.right img { left:30px; }
+
+
+
+
+/* ================================================================== CONFIG HEADER */
+.topheader{
+	width: 100%; height: 200px; 
+}
+
+.affix {
+	top:0;
+	width: 100%;
+	z-index: 9999 !important;
+	height: 10px;
+}
+.affix-top{
+	transition: all 0.5s;
+}
+
+
+/* ================================================================== CONFIG FOOTER */
+/* footer{
+	background: #292929;
+	color: #9d9d9d;
+	width: 100%;
+	height: 200px;
+	position: relative;
+} */
+
+#rodape{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	border-top: 1px dashed;
+	font-size: 16px;
+}
+
+#rodape a{
+	color: #00bfc6;
+	transition: all 0.5s;
+}
+#rodape a:hover{ 
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 0 0 10px #fff;
+}
+
+/* ================================================================== PAGE LOGIN */
+#log-page{ 	background: #292929; }
+
+#log-painel{
+	width: 250px;
+	margin: 5% auto 0 auto;
+	padding: 20px 15px;
+	text-align: center;
+	color: #fff;
+}
+
+#log-painel h1{ margin-top: 35px; }
+#log-painel a{ cursor: pointer; }
+
+#log-painel img{transition: all 0.5s; }
+#log-painel img:hover{ box-shadow: 0 0 30px #fff; }
+
+/* ================================================================== CONFIG CAROUSEL */
+#myCar{
+	width: 100%;
+	margin: 15px auto;
+	box-shadow: 0 0 15px;
+}
+
+#myCar span{ font-size: 50px; }
+
+.carousel-control{ 
+	color: #00bfc6 !important;
+	transition: all 0.5s; 
+}
+.carousel-control:hover{ text-shadow: 0 0 15px #00bfc6; }
+
+.carousel-indicators li {
+	width: 20px;
+	height: 6px;
+	margin: 1px;
+	border-color: #00bfc6;
+	border-radius: 0;
+	transition: all 0.5s;
+}
+
+.carousel-indicators .active {
+	width: 20px;
+	height: 6px;
+	margin: 1px;
+	border-radius: 0;
+	background-color: #00bfc6;
+	box-shadow: 0 0 15px #00bfc6;
+}
+
+.carousel-indicators {
+	bottom: 0 !important;
+	left: initial;
+	right: 1px;
+	width: auto;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+/* ================================================================== CONFIG FORM */
+fieldset#fs-default{
+	width: 450px;
+	margin: 30px auto;
+}
+
+#fs-default legend{ font-size: 30px; }
+
+.form-default label{ 
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.form-default input{ 
+	font-size: 16px;
+	transition: all 0.5s;
+}
+
+.form-default input:focus{ 
+	background: #292929;
+	color: #d9d9d9;
+}
+
+.form-default .checkbox label{ 
+	text-transform: none;
+	font-size: 14px;
+}
+
+.btn-default{ 
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 30px;
+	transition: all 0.5s; 
+}
+
+.btn-default:hover{
+	background-color: #292929;
+	color: #d9d9d9;
+}
+
+/* ================================================================== CONFIG TABLE */
+table#table-default{
+	width: 100%;
+	margin: 20px 0;
+	border: 1px solid;
+	text-align: center;
+}
+
+#table-default th{
+	border: 1px solid;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.5s;
+}
+#table-default th:hover{ letter-spacing: 5px; }
+
+#table-default td{ border: 1px dashed; }
+
+.row { float:left; width:100%; }
+
+/* FOOTER */
+
+footer { float:left; width:100%; padding:30px 0px 30px; background-color:#BDB76B; }
+footer .item { float:left; }
+footer p { float:left; width:100%; margin-bottom:10px; color:#FFF; font-size:18px; line-height:22px; }
+footer ul { float:left; width:100%; list-style:none; }
+footer ul li { float:left; width:100%; margin-bottom:10px; }
+footer ul li a { float:left; width:100%; font-size:20px; color:white; font-weight:800; }
+footer .button { float:left; width:100%; margin-bottom:35px; }
+footer .button:last-child { margin-bottom:0px; }
+footer .btn { float:left; font-size:24px; }
+
+footer .designio { float:right; height:20px; margin-top:30px; }
+
+footer .subfooter { float:left; width:100%; margin-top:30px; padding:10px 0px; }
+footer .subfooter img { float:right; height:20px; }
+
+.col-12 { width:100%; }
+
+#profile { height:480px; position:relative; padding:0px; background-color:white;}
+#profile2 { height:580px; position:relative; padding:0px; background-color:white;}
+
+#profile .profile .item.profile-user-edit form { float:left; width:100%; }
+
+#profile .profile .item.profile-user-edit form { float:left; width:100%; }
+#profile .profile .item.profile-user-edit .column { float:left; width:calc(33.33% - 20px); margin-right:30px; }
+
+.margemDefaultTop{
+	margin-top: 50px;
+}
+.margemDefaultLeft{
+	margin-left: 35px;
+}
+
+/*Tela buscar Profissionais*/
+.circle {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-right: 15px;
+}
+.circle-avatar {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  float: left;
+  position: absolute; top: 10px; left: 10px
+}
+.circle img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.descPanel{
+	margin-left: 5px;
+}
+
+.card-profissional{
+	max-height: 250px !important;
+	border:1px;
+	box-shadow: rgba(0,0,0,1);
+}
