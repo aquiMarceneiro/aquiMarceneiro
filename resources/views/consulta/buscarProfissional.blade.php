@@ -65,7 +65,7 @@
 											<p><strong>Rua: </strong>{{$p->rua}}</p>
 											<p><strong>Descrição: </strong>{{$p->descricao}}</p>
 											<p><strong>Especialidade de Serviço: </strong>{{$p->especialidade}}</p>
-											<p><strong>Especialidade de Serviço: </strong>{{$p->email}}</p>
+											<p><strong>Email: </strong>{{$p->email}}</p>
 											<div id="map"></div>
 											<input type="hidden" value="{{$p->latitude}}" name="" id="latitude">
 											<input type="hidden" value="{{$p->longitude}}" name="" id="longitude">
