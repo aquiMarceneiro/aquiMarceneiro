@@ -1,4 +1,4 @@
--- --------------------------------------------------------
+﻿-- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
 -- Versão do servidor:           5.7.19 - MySQL Community Server (GPL)
 -- OS do Servidor:               Win64
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `cidade` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `cep` varchar(8) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `descricao` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `especialidade` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `especialidade` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tipo` char(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `foto_usuario` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'default.jpg',
   `rua` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

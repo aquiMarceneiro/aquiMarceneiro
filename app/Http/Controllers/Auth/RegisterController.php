@@ -72,6 +72,13 @@ class RegisterController extends Controller
     {
 
 
+        $especialidade = '';
+
+        foreach($data['especialidade'] as $row){
+            $especialidade .= $row . ', ';
+        }
+        $especialidade = substr($especialidade, 0, -2);
+
         return User::create([
 
             'name' => $data['name'],
@@ -82,12 +89,13 @@ class RegisterController extends Controller
             'cidade' => $data['cidade'],
             'cep' => $data['cep'],
             'descricao' => $data['descricao'],
-            'especialidade' => $data['especialidade'],
+            'especialidade' => $especialidade,
             'tipo' => $data['tipo'],
             'rua' => $data['rua'],
             'bairro' => $data['bairro'],
             'latitude' => $data['lat'],
             'longitude' => $data['lon']
+            
 
 
         ]);

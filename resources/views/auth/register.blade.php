@@ -132,7 +132,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="localizacaoGeografica">
                             <label id="demo" class="col-md-4 control-label">Clique no botão para obter sua localização geográfica</label>
                             <div class="col-md-6">
                                 <a id="btnLocation" onclick="getLocation()" class="form-control btn btn-primary">Clique aqui</a>
@@ -147,7 +147,16 @@
                             <label for="especialidade" class="col-md-4 control-label" id="labelEspcialidade">Especialidade</label>
 
                             <div class="col-md-6">
-                                <input id="especialidade" type="text" class="form-control" name="especialidade" >
+                            <select name="especialidade[]" id="especialidade" class="form-control selectpicker" multiple>
+                                <option value="Montador de móveis">Montador de móveis</option>
+                                <option value="Reforma de móveis">Reforma de móveis</option>
+                                <option value="Restauração de móveis">Restauração de móveis</option>
+                                <option value="Móveis sob medida">Móveis sob medida</option>
+                                <option value="Móveis rústicos">Móveis rústicos</option>
+                                <option value="Projetos de móveis">Projetos de móveis</option>
+                                <option value="Projeto de interiores">Projeto de interiores</option>
+                                <option value="Outros">Outros</option>
+                            </select>
                             </div>
                         </div>
 
@@ -231,8 +240,9 @@ $(document).ready(function(){
         $('#rua').show();
         $('#bairro').show();
         $('#telefone').show();
-
-        $('#espcialidade').hide();
+        
+        $('#localizacaoGeografica').hide();
+        $('#especialidade').hide();
         $('#descricao').hide();
 
         $('#cadastrar').show();
@@ -259,10 +269,12 @@ $(document).ready(function(){
         $('#labelEspcialidade').show();
         $('#labelDescricao').show();
 
+        $('#localizacaoGeografica').show();
         $('#especialidade').show();
         $('#descricao').show();
         $('#btnLocation').show();
         $('#demo').show();
+
     }
 
     function selecionarTipoUsuario(){
