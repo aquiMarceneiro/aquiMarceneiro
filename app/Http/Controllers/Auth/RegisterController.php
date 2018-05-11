@@ -78,6 +78,12 @@ class RegisterController extends Controller
             $especialidade .= $row . ', ';
         }
         $especialidade = substr($especialidade, 0, -2);
+        
+
+        $telefone  = str_replace("(","", $data['numero_celular']);
+        $telefone2 = str_replace(")","", $telefone);
+        $telefone3 = str_replace("-","", $telefone2);
+
 
         return User::create([
 
@@ -86,6 +92,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'cpf_cnpj' => $data['cpf_cnpj'],
             'uf' => $data['uf'],
+            'numero_celular' => $telefone3,
             'cidade' => $data['cidade'],
             'cep' => $data['cep'],
             'descricao' => $data['descricao'],

@@ -52,10 +52,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="telefone" class="col-md-4 control-label" id="labelTelefone">Telefone</label>
+                            <label for="numero_celular" class="col-md-4 control-label" id="labelTelefone">Telefone</label>
 
                             <div class="col-md-6">
-                                <input id="telefone" type="text" class="form-control" name="telefone" value="{{ old('telefone') }}" data-mask="(00)00000-0000" placeholder="(00)00000-0000" required>
+                                <input id="numero_celular" type="text" class="form-control" name="numero_celular" value="{{ old('numero_celular') }}" data-mask="(00)00000-0000" placeholder="(00)00000-0000" required>
                             </div>
                         </div>
 
@@ -192,7 +192,7 @@ $(document).ready(function(){
          //Inputs
         $('#name').hide();
         $('#email').hide();
-        $('#telefone').hide();
+        $('#numero_celular').hide();
         $('#password').hide();
         $('#password-confirm').hide();
         $('#cpf_cnpj').hide();
@@ -239,7 +239,7 @@ $(document).ready(function(){
         $('#cidade').show();
         $('#rua').show();
         $('#bairro').show();
-        $('#telefone').show();
+        $('#numero_celular').show();
         
         $('#localizacaoGeografica').hide();
         $('#especialidade').hide();

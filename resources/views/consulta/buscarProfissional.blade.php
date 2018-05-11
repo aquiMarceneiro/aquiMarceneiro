@@ -66,7 +66,8 @@
 											<p><strong>Descrição: </strong>{{$p->descricao}}</p>
 											<p><strong>Especialidade de Serviço: </strong>{{$p->especialidade}}</p>
 											<p><strong>Email: </strong>{{$p->email}}</p>
-											<div id="map"></div>
+											<a href="http://api.whatsapp.com/send?1=pt_BR&phone=55{{$p->numero_celular}}" class="btn btn-primary " target="_BLANK">Whatsapp <img src="{{asset('img/icones/whatsapp_icon.png')}}" class="icone" /></a>
+											<div id="map" class="margemTop15"></div>
 											<input type="hidden" value="{{$p->latitude}}" name="" id="latitude">
 											<input type="hidden" value="{{$p->longitude}}" name="" id="longitude">
 							             </div>
@@ -81,21 +82,6 @@
 							      function initMap() {
 							      	latitude = parseFloat(document.getElementById('latitude').value);
 							      	longitude = parseFloat(document.getElementById('longitude').value);
-								     /* Map options
-								        var options = {
-								        	zoom:14,
-								        	center:{lat:latitude, lng:longitude}
-
-								        }
-								 //New map
-								        var map = new google.maps.Map(document.getElementById('map'), options);
-								      
-								 //Marker
-								 		var marker = new google.maps.Marker({
-								 			position:{lat:latitude, lng:longitude},
-								 			map: map,
-								 		});
-								 		*/
 
 									var uluru = {lat: latitude, lng: longitude};
 							        var map = new google.maps.Map(document.getElementById('map'), {
