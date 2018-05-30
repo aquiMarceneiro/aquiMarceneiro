@@ -60,7 +60,7 @@
 
 
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative; padding-left: 50px;">
-                                        <div class="circle-avatar">
+                                        <div class="circle circle-avatar">
                                             <img src="/img/fotoupload/{{ Auth::user()->foto_usuario }}" class="rounded" alt="{{Auth::user()->name}}" />
                                         </div> 
                                        {{ Auth::user()->name }} <span class="caret"></span>
