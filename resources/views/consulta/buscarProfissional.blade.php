@@ -2,26 +2,44 @@
 
 @section('content')
 <div class="container-fluid">
-	<section id="hero">
+	<section id="hero">	
+					<form enctype="multipart/form-data" method="POST" action="/home/consultaProfissional" class="form-horizontal form_pesquisa">
+                        {{ csrf_field() }}
+						<div class="row">
+							<div class="col-md-2">
+								<input type="text" name="pesquisa_cep" id="pesquisa_cep" class="form-control" placeholder="Digite o CEP" data-mask="00000-000	" />	
+							</div>
+							<div class="col-md-3">
+								<select name="pesquisa_especialidade" id="pesquisa_especialidade" class="form-control selectpicker">
+									<option value="Montador de móveis">Montador de móveis</option>
+									<option value="Reforma de móveis">Reforma de móveis</option>
+									<option value="Restauração de móveis">Restauração de móveis</option>
+									<option value="Móveis sob medida">Móveis sob medida</option>
+									<option value="Móveis rústicos">Móveis rústicos</option>
+									<option value="Projetos de móveis">Projetos de móveis</option>
+									<option value="Projeto de interiores">Projeto de interiores</option>
+									<option value="Outros">Outros</option>
+								</select>
+							</div>
+								<div class="col-md-3 input-group">
+									<input type="text" class="form-control" placeholder="Digite uma Cidade" id="pesquisa_cidade" name="pesquisa_cidade">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit">Pesquisar</button>
+									</span>
+								</div>
+						</div>
+					</form>
 
-				<div class="row">
-					  <div class="col-md-6">
-					    <div class="input-group" style="margin-bottom: 15px;">
-					      <input type="text" class="form-control" placeholder="Digite uma Cidade">
-						  <!-- <input type="text" class="form-control" placeholder="Digite um CEP">
-						  <input type="text" class="form-control" placeholder="Digite um Bairro">
-						  <input type="text" class="form-control" placeholder="Digite uma Especialidade"> -->
-					      <span class="input-group-btn">
-					        <button class="btn btn-default" type="button">Pesquisar</button>
-					      </span>
-					    </div><!-- /input-group -->
-					  </div><!-- /.col-lg-6 -->
-						<div class="col-md-12 col-sm-12">
+						@if(count($profissional) < 1)
+							<div class="alet alert-danger" style="padding: 10px; width:50%; border-radius:5px;">
+								<p><strong>Não encontramos nenhum resultado para sua pesquisa.</strong</p>
+							</div>
+						@else
 							<table id="tabela-profissionais" class="table table-condensed" cellspacing="0" style="width: 100%;">
 								<thead>
 									<th>#</th>
 									<th>Nome</th>
-									<th>Descrição</th>
+									<th>Especialidade</th>
 									<th>UF/Cidade</th>
 									<th>Informações</th>
 								</thead>
@@ -37,7 +55,7 @@
 											{{$p->name}}
 										</td>
 										<td>
-											{{$p->descricao}}
+											{{$p->especialidade}}
 										</td>
 										<td>
 											{{$p->uf}} - {{$p->cidade}}
@@ -50,6 +68,7 @@
 							
 						</div>
 					</div>
+
 							<!-- Modal -->
 							<div class="modal fade" id="modal-mensagem">
 							    <div class="modal-dialog">
@@ -95,12 +114,12 @@
 								 	}
 							</script>
 
-							@endforeach
+							@endforeach 
 						</table>
+						@endif 
 				</div>
 			</div>
 		</div>
 	</section>
 </div>
-
 @endsection

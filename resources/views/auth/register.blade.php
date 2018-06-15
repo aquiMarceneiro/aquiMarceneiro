@@ -8,7 +8,7 @@
                 <div class="panel-heading">Cadastro</div>
 
                 <div class="panel-body">
-                    <form enctype="multipart/form-data" method="POST" action="{{ route('register') }}" class="form-horizontal">
+                    <form enctype="multipart/form-data" method="POST" action="/home/consultaProfissional" class="form-horizontal">
                         {{ csrf_field() }}
 
                          <div class="form-group">

@@ -19,9 +19,14 @@
     
     <script type="text/javascript" src="{{asset('jquery/jquery.js')}}"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-   <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 
-
+    <!-- Jquery DataTable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+   
+    
 </head>
 <body>
             

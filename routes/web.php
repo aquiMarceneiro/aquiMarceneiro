@@ -50,3 +50,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/home/buscarProfisional', 'BuscarProfissionalController@consultaDefault');
+
+Route::post('/home/consultaProfissional', 'BuscarProfissionalController@consultaParametrizada');
+

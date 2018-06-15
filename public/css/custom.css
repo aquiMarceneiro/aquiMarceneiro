@@ -2,8 +2,9 @@ html {
     position: relative;
     min-height: 100%;
 }
+/*
 body {
-    margin: 0 0 100px; /* footer's height */
+   // margin: 0 0 100px;  footer's height 
 
      background: url(../img/fundo.png) no-repeat center top fixed;
 
@@ -17,6 +18,7 @@ body {
 	line-height: 1.5;
 	height:100%;
 }
+*/
 .icone{
   height:25px;
   width: 25px;
@@ -113,7 +115,10 @@ footer.footer {
 .imagem-slide{
 	width: 100%;
 }
-
+.form_pesquisa{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
 form .content { width:100%; }
 form .content .blc { position:relative;float:left;width:30%; margin-right: 2%; margin-top: 2%;}
 label { display:block; }
