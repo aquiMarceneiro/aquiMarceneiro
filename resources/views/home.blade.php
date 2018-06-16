@@ -52,7 +52,21 @@
                                     <h3>Seja premium !</h3>
                                     <p>
                                         Você subirá no ranking das pesquisas, descontos em materiais com empresas parceiras e terá suporte privilegiado.</p>
-                                    <!-- PayPal Logo --><img  src="https://www.paypal-brasil.com.br/logocenter/util/img/botao-checkout_horizontal_paguecom_ap.png" border="0" alt="Imagens de solução" /><!-- PayPal Logo -->
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_xclick">
+                                            <input type="hidden" name="business" value="romerorussell@hotmail.com.br">
+                                            <input type="hidden" name="lc" value="BR">
+                                            <input type="hidden" name="item_name" value="Romero Russel">
+                                            <input type="hidden" name="item_number" value="1">
+                                            <input type="hidden" name="amount" value="30.00">
+                                            <input type="hidden" name="currency_code" value="BRL">
+                                            <input type="hidden" name="button_subtype" value="services">
+                                            <input type="hidden" name="no_note" value="0">
+                                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest">
+                                            <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+                                        </form>
+
                                 </div>
                             </div>
                         </div>
