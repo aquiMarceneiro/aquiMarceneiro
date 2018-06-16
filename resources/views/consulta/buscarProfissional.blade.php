@@ -3,32 +3,41 @@
 @section('content')
 <div class="container-fluid">
 	<section id="hero">	
-					<form enctype="multipart/form-data" method="POST" action="/home/consultaProfissional" class="form-horizontal form_pesquisa">
-                        {{ csrf_field() }}
-						<div class="row">
-							<div class="col-md-2">
-								<input type="text" name="pesquisa_cep" id="pesquisa_cep" class="form-control" placeholder="Digite o CEP" data-mask="00000-000	" />	
-							</div>
-							<div class="col-md-3">
-								<select name="pesquisa_especialidade" id="pesquisa_especialidade" class="form-control selectpicker">
-									<option value="Montador de móveis">Montador de móveis</option>
-									<option value="Reforma de móveis">Reforma de móveis</option>
-									<option value="Restauração de móveis">Restauração de móveis</option>
-									<option value="Móveis sob medida">Móveis sob medida</option>
-									<option value="Móveis rústicos">Móveis rústicos</option>
-									<option value="Projetos de móveis">Projetos de móveis</option>
-									<option value="Projeto de interiores">Projeto de interiores</option>
-									<option value="Outros">Outros</option>
-								</select>
-							</div>
-								<div class="col-md-3 input-group">
-									<input type="text" class="form-control" placeholder="Digite uma Cidade" id="pesquisa_cidade" name="pesquisa_cidade">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="submit">Pesquisar</button>
-									</span>
-								</div>
-						</div>
-					</form>
+		<nav aria-label="breadcrumb">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/">Início</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Minha Conta</li>
+				</ol>
+			</nav>
+		</nav>
+	<form enctype="multipart/form-data" method="POST" action="/home/consultaProfissional" class="form-horizontal form_pesquisa">
+        {{ csrf_field() }}
+		<div class="row">
+			<div class="col-md-2">
+				<input type="text" name="pesquisa_cep" id="pesquisa_cep" class="form-control" placeholder="Digite o CEP" data-mask="00000-000	" />	
+			</div>
+				<div class="col-md-3">
+					<select name="pesquisa_especialidade" id="pesquisa_especialidade" class="form-control selectpicker">
+						<option value="Montador de móveis">Montador de móveis</option>
+						<option value="Reforma de móveis">Reforma de móveis</option>
+						<option value="Restauração de móveis">Restauração de móveis</option>
+						<option value="Móveis sob medida">Móveis sob medida</option>
+						<option value="Móveis rústicos">Móveis rústicos</option>
+						<option value="Projetos de móveis">Projetos de móveis</option>
+						<option value="Projeto de interiores">Projeto de interiores</option>
+						<option value="Outros">Outros</option>
+					</select>
+				</div>
+				<div class="col-md-3 input-group">
+					<input type="text" class="form-control" placeholder="Digite uma Cidade" id="pesquisa_cidade" name="pesquisa_cidade">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit">Pesquisar</button>
+					</span>
+				</div>
+		</div>
+	</form>
+	
 
 						@if(count($profissional) < 1)
 							<div class="alet alert-danger" style="padding: 10px; width:50%; border-radius:5px;">
@@ -78,6 +87,7 @@
 							                 <h4 class="modal-title">Informações do Profissional</h4>
 							             </div>
 							             <div class="modal-body">
+										 	<x-star-rating value="3" number="5"></x-star-rating>
 							                <p><strong>Nome: </strong>{{$p->name}}</p>
 											<p><strong>UF/Cidade: </strong>{{$p->uf}} - {{$p->cidade}}</p>
 											<p><strong>CEP: </strong>{{$p->cep}}</p>
@@ -89,6 +99,15 @@
 											<div id="map" class="margemTop15"></div>
 											<input type="hidden" value="{{$p->latitude}}" name="" id="latitude">
 											<input type="hidden" value="{{$p->longitude}}" name="" id="longitude">
+
+											<!-- GALERIA IMAGENS -->
+											<h4>Meus Trabalhos</h4>
+											<div class="galeria-imagem">
+												<a class="example-image-link" href="{{asset('img/meus-trabalhos/01.jpg')}}" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="{{asset('img/meus-trabalhos/01.jpg')}}" alt=""/></a>
+												<a class="example-image-link" href="{{asset('img/meus-trabalhos/02.jpg')}}" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="{{asset('img/meus-trabalhos/02.jpg')}}" alt="" /></a>
+												<a class="example-image-link" href="{{asset('img/meus-trabalhos/03.jpg')}}" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="{{asset('img/meus-trabalhos/03.jpg')}}" alt="" /></a>
+												<a class="example-image-link" href="{{asset('img/meus-trabalhos/04.jpg')}}" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="{{asset('img/meus-trabalhos/04.jpg')}}" alt="" /></a>
+											</div>
 							             </div>
 							             <div class="modal-footer">
 							                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>

@@ -19,13 +19,9 @@
     
     <script type="text/javascript" src="{{asset('jquery/jquery.js')}}"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
 
-    <!-- Jquery DataTable -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
- 
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
-   
+    <link rel="stylesheet" href="{{asset('star-rating-master/StarRating.css')}}">
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     
 </head>
 <body>
@@ -105,7 +101,8 @@
 
         <footer class="footer">
                     <p>
-                       Com o AquiMarceneiros, você que é marceneiro tem maior visibilidade do seu trabalho. E pra quem necessita de<br />algum reparo, ou planeja um móvel novo, o AquiMarceneiros lhe ajuda a encontrar o melhor profissional mais próximo a você
+                        Tem algum feedback ? Envie-nos um email, ficaremos felizes em receber sua opinião !
+                        <strong><a href="#" target="_BLANK" style="text-decoration:none;">aquimarceneiro@hotmail.com</a></strong>
                     </p>
         </footer>   
         <!-- Scripts -->
@@ -113,6 +110,8 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js">
         </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpAJ6nuKLV3KhTYVsUOY3ZgmEkt9oQKV4&callback=initMap"></script>
-
+        <script src="{{asset('star-rating-master/StarRating.js')}}"></script>
+        <!-- Lightbox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

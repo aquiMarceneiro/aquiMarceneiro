@@ -35,6 +35,32 @@
         </div>
         <div id="tudo">
         <div class="container">
+
+        <div class="row">
+                <h2 class="title">É um profissional e precisa de visibilidade nas pesquisas ?</h2>
+                    </div>
+                <div class="row" style="margin-bottom: 50px;">
+                    <div class="col-md-6">
+                        <div style="margin-left: 25%;">
+                            <img src="{{asset('img/premium.png')}}">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="itens">
+                            <div class="item left">
+                                <div class="info">
+                                    <h3>Seja premium !</h3>
+                                    <p>
+                                        Você subirá no ranking das pesquisas, descontos em materiais com empresas parceiras e terá suporte privilegiado.</p>
+                                    <!-- PayPal Logo --><img  src="https://www.paypal-brasil.com.br/logocenter/util/img/botao-checkout_horizontal_paguecom_ap.png" border="0" alt="Imagens de solução" /><!-- PayPal Logo -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
                     <div class="row">
                         <h2 class="title">Precisando de marceneiro?</h2>
                     </div>

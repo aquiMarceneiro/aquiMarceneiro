@@ -3,84 +3,77 @@
 
 	<div class="container">
 		<section id="hero">
-			<form>
-				<!-- <div class="row"> -->
+			<nav aria-label="breadcrumb">
 
-					<div class="content">
-					<div class="blc">
+				<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/">Início</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Minha Conta</li>
+				</ol>
+			</nav>
+			<form enctype="multipart/form-data" action="/home/minhaConta/alterarUsuario" method="POST" class="form_minha_conta">
+				{{csrf_field()}}
+					
+					<div class="form-group">
 						<label for="textNome" class="control-label">Nome</label>
-						<input type="text" class="form-control" name="name_usuario" id="name_usuario" value="{{Auth::user()->name}}" disabled>
-					</div>
-					<div class="blc">
-						<label for="textNome" class="control-label">E-mail</label>
-						<input type="text" class="form-control" name="emal_usuario" id="emal_usuario" value="{{Auth::user()->email}}" disabled>
-					</div>
-					<div class="blc">
-						<label for="textNome" class="control-label">CPF</label>
-						<input type="text" class="form-control" name="cpf_usuario" id="cpf_usuario" value="{{Auth::user()->cpf_cnpj}}" disabled>
-					</div>
+						<input type="text" class="form-control" name="name_usuario" id="name_usuario" value="{{Auth::user()->name}}">
 					</div>
 
-					<div class="content">
-					<div class="blc">
+					<div class="form-group">
+						<label for="textNome" class="control-label">E-mail</label>
+						<input type="text" class="form-control" name="emal_usuario" id="emal_usuario" value="{{Auth::user()->email}}">
+					</div>
+
+					<div class="form-group">
+						<label for="textNome" class="control-label">CPF</label>
+						<input type="text" class="form-control" name="cpf_usuario" id="cpf_usuario" value="{{Auth::user()->cpf_cnpj}}">
+					</div>
+
+					<div class="form-group">
 						<label for="textNome" class="control-label">UF</label>
-						<input type="text" class="form-control"  name="uf_usuario" id="uf_usuario" value="{{Auth::user()->uf}}" disabled>
+						<input type="text" class="form-control"  name="uf_usuario" id="uf_usuario" value="{{Auth::user()->uf}}">
 					</div>
-					<div class="blc">
+
+					<div class="form-group">
 						<label for="textNome" class="control-label">Cidade</label>
-						<input type="text" class="form-control"  name="cidade_usuario" id="cidade_usuario" value="{{Auth::user()->cidade}}" disabled>
+						<input type="text" class="form-control"  name="cidade_usuario" id="cidade_usuario" value="{{Auth::user()->cidade}}">
 					</div>
-					<div class="blc">
+
+					<div class="form-group">
+						<label for="textNome" class="control-label">Bairro</label>
+						<input type="text" class="form-control"  name="bairro_usuario" id="bairro_usuario" value="{{Auth::user()->cidade}}">
+					</div>
+
+					<div class="form-group">
 						<label for="textNome" class="control-label">CEP</label>
-						<input type="text" class="form-control"  name="cep_usuario" id="cep_usuario" value="{{Auth::user()->cep}}" disabled>
-					</div>
+						<input type="text" class="form-control"  name="cep_usuario" id="cep_usuario" value="{{Auth::user()->cep}}">
 					</div>
 
 					@if(Auth::user()->tipo == 2)
-						<div class="content">
-						<div class="blc">
+						<div class="form-group">
 							<label for="textNome" class="control-label">Descrição</label>
-							<input type="text" class="form-control"  name="descricao_usuario" id="descricao_usuario" value="{{Auth::user()->descricao}}" disabled>
+							<textarea class="form-control"  name="descricao_usuario" id="descricao_usuario" style="resize: none;">
+								{{Auth::user()->descricao}}
+							</textarea>
 						</div>
-						<div class="blc">
+
+						<div class="form-group">
 							<label for="textNome" class="control-label">Especialidade</label>
-							<input type="text" class="form-control"  name="especialidade_usuario" id="especialidade_usuario" value="{{Auth::user()->especialidade}}" disabled>
-						</div>
+							<input type="text" class="form-control"  name="especialidade_usuario" id="especialidade_usuario" value="{{Auth::user()->especialidade}}">
 						</div>
 					@endif
-			</form>
 
-<!-- 			
-			<p>{{Auth::user()->name}}</p>
-			<p>{{Auth::user()->email}}</p>
-			<p>{{Auth::user()->cpf_cnpj}}</p>
-			<p>{{Auth::user()->uf}}</p>
-			<p>{{Auth::user()->cidade}}</p>
-			<p>{{Auth::user()->cep}}</p> -->
-			<!-- @if(Auth::user()->tipo == 2)
-				<p>{{Auth::user()->descricao}}</p>
-				<p>{{Auth::user()->especialidade}}</p>
-			@endif -->
-
-			<form enctype="multipart/form-data" action="/home/minhaConta/inserirFotoUsuario" method="POST" class="form-horizontal">
-				{{csrf_field()}}
-				<div class="content">
-
-				<div class="blc">
+				<div class="form-group">
 					<input type="hidden" name="id_usuario" id="id_usuario" value="{{Auth::user()->id}}">
 					<label for="foto_usuario">Adicionar foto</label>
 					<input type="file" name="foto_usuario" id="foto_usuario">
 				</div>
-				<div class="blc">
-					<button type="submit" class="btn btn-primary">Salvar Foto</button>
-				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Alterar</button>
 				</div>
 			</form>
-			<!-- </div> -->
 		</section>
-
-		<!-- <button type="button" class="btn btn-primary">Alterar</button>
-		<button type="submit" class="btn btn-primary">Salvar</button> -->
 			
 	</div>
 

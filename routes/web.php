@@ -36,7 +36,7 @@ Route::post('/cadastrarUsuario/formularioCliente/cadastroCliente', 'UsuarioContr
 
 Route::post('/cadastrarUsuario/formularioMarceneiro/cadastroMarceneiro', 'MarceneiroController@cadastrarMarceneiro');
 
-Route::post('/home/minhaConta/inserirFotoUsuario', 'UsuarioController@updateAvatar');
+Route::post('/home/minhaConta/alterarUsuario', 'UsuarioController@alterarUsuario');
 
 Route::get('/buscarProfissional/maisInformacoes/{id}', 'BuscarProfissionalController@detalhesProfissional')->where('id','[0-9+]');
 

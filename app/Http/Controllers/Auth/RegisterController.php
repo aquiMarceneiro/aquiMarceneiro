@@ -102,9 +102,6 @@ class RegisterController extends Controller
             'bairro' => $data['bairro'],
             'latitude' => $data['lat'],
             'longitude' => $data['lon']
-            
-
-
         ]);
     }
 }
